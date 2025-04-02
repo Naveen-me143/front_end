@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX3</title>
+    <style>
+     /* Flex container */
+/* Parent container */
+/* Flex container */
+.parent {
+  height: 600px;
+  border: 1px solid red;
+  display: flex;
+}
+
+/* Flex items */
+.child {
+    flex-shrink: 1;/*default value is :1*/
+  flex-grow: 1;/*default value is :0*/
+  height: 100px;
+  width: 200px;
+  font-size: 40px;
+}
+
+.one { background-color: cyan; }
+    .two {
+     flex-shrink: 3;
+         background-color: red; }
+    .three { background-color: green; 
+           /* flex-grow:3 ;         */
+    }
+    .four { background-color: blue; }
+
+
+    </style>
+    
+</head>
+<body>
+    <h1>FLEX</h1>
+    <hr>
+    <p>It is used to align elements.</p>
+    <p>It is used to distribute space between elements.</p>
+    <p>It is used to distribute around elements.</p>
+    <p>It will arrange elements in cross axis and main axis.</p>
+    <p>directions are row(D),row reverse,columan,columan reverse</p>
+    <p>display lex:is used to flex the container</p>
+    <p>flex container is the mai n divison of containar</p>
+    <hr>
+    <div class="parent">
+       
+        <div class="child one">1</div>
+        <div class="child two">2</div>
+        <div class="child three">3</div>
+        <div class="child four">4</div>
+        <div class="child one">1</div>
+        <div class="child two">2</div>
+        <div class="child three">3</div>
+        <div class="child four">4</div>
+        
+    </div>
+      
+</body>
+</html>

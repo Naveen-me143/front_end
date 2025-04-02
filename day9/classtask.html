@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Layout</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "content section1 section1"
+                "content section2 section2"
+                "footer footer footer";
+            grid-template-rows: auto;
+            grid-gap: 10px;
+        }
+        .header {
+            grid-area: header;
+            background-color: red;
+            text-align: center;
+        }
+        .content {
+            grid-area: content;
+            background-color: blue;
+            color: white;
+            text-align: center;
+        }
+        .section1 {
+            grid-area: section1;
+            background-color: green;
+            color: white;
+            text-align: center;
+        }
+        .section2 {
+            grid-area: section2;
+            background-color: cyan;
+            text-align: center;
+        }
+        .footer {
+            grid-area: footer;
+            background-color: lightgreen;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="content">Content</div>
+        <div class="section1">Section1</div>
+        <div class="section2">Section2</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
