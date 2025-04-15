@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitwise Operators</title>
+</head>
+<body>
+    <p>algorithms</p>
+    <script>
+     let a = 1;  // Binary: 0001
+        let b = 5;  // Binary: 0101
+        // Bitwise Operators
+        document.write("<h3>Bitwise Operators</h3>");
+        document.write("a = " + a + ", b = " + b + "<br><br>");
+        document.write("a & b: " + (a & b) + "<br>");   // 0001 & 0101 = 0001 (1)
+        document.write("a | b: " + (a | b) + "<br>");   // 0001 | 0101 = 0101 (5)
+        document.write("a ^ b: " + (a ^ b) + "<br>");   // 0001 ^ 0101 = 0100 (4)
+        document.write("~a: " + (~a) + "<br>");         // ~0001 = 1110 (in 32-bit: -2)
+        document.write("a << 1: " + (a << 1) + "<br>"); // 0001 << 1 = 0010 (2)
+        document.write("a >> 1: " + (a >> 1) + "<br>"); // 0001 >> 1 = 0000 (0)
+        console.log(a&b);//sets bit to 1 when the both bits are 1
+        console.log(a|b);//sets bit to 1 when  one of two bits is 1
+        console.log(~a);//inverts all bits
+        console.log(a^b);
+        console.log(5>>1);
+        console.log(5<<1);
+     
+
+
+    </script>
+</body>
+</html>

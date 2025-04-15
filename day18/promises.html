@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Coffee Chain</title>
+</head>
+<body>
+    <script>
+        function boilWater() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Boiling water...");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        function brewCoffee() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Brewing coffee...");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        function addSugarAndMilk() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Adding sugar and milk...");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        function pourInCup() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Pouring into the cup...");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        function serveCoffee() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Serving coffee...");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        // 🔁 Chained Execution
+        boilWater()
+            .then(() => brewCoffee())
+            .then(() => addSugarAndMilk())
+            .then(() => pourInCup())
+            .then(() => serveCoffee())
+            .then(() => {
+                console.log("☕ Coffee is ready! Enjoy.");
+            })
+            .catch((error) => {
+                console.error("Something went wrong during preparation:", error);
+            });
+            //all the above code  it is done by a synchronous way :
+    </script>
+</body>
+</html>
+

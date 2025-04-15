@@ -1,0 +1,19 @@
+javascript:
+it is used to create dynamic and interactive webpages
+it is a scripting lang
+it is a client side lang
+it is used to add behaviour and functionalities to webpages>angular
+react
+vuejs
+nodejs
+>current ver--ECMScript 13c(ES13)
+ECMA-european comp's manufa assciation
+>______.js extension
+----------------------
+js in 3 ways:
+inline js
+internal js
+external js
+1.inline js:
+<button script=""> </button>
+internal js

@@ -1,0 +1,140 @@
+Here's the updated code where Section 2 and Article 2 have been merged into a single section, and an image has been added within that combined section:
+HTML Code:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Page with Combined Section</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Website Title</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Section 1</h2>
+            <p>Content for section 1 goes here.</p>
+        </section>
+        <section class="combined-section">
+            <h2>Combined Section 2</h2>
+            <p>This is the combined content for Section 2 and Article 2.</p>
+            <figure>
+                <img src="your-image-path.jpg" alt="Image for combined section">
+            </figure>
+        </section>
+        <aside>
+            <p>Additional content for the sidebar goes here.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Website</p>
+    </footer>
+</body>
+</html>
+
+
+CSS Code:
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Main Section Styles */
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+section {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.combined-section {
+    background-color: lightyellow;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(78, 78, 194, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+figure {
+    margin: 20px auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px rgba(78, 78, 194, 0.5);
+    border-radius: 10px;
+}
+
+/* Aside Styles */
+aside {
+    background-color: lightblue;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Footer Styles */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+Explanation:
+- Section 2 and Article 2: Merged into a single <section> element with a class called combined-section.
+- Image Added: An image (<figure> and <img>) has been included inside the combined section.
+- Styling: Added a box shadow, rounded corners, and centered text for the combined section and image for a cleaner design.
+
+You can replace "your-image-path.jpg" with the actual path or URL of the image you'd like to display. Let me know if you'd like to refine this further!

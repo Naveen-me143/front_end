@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable2</title>
+</head>
+<body>
+    <h1>variable2</h1>
+    <hr>
+    <pre>
+        >it is used to store data/value and its acts like a container
+        >based on declaration:
+        >
+    </pre>
+    <ol>
+        <li>var
+            <ul>
+                <li>var is used to decalre the variable</li>
+                <li>var is used to redecalre the variable</li>
+                <li>var is used to reintialize the value</li>
+                <li>function scope</li>
+                <li>in var possible to redeclare but not in let and reintialize is possible and declare is also possible in let for the value and block scope is also there in let</li>
+                <li>const is used to declare and assign the variable and it is a block scope</li>
+            </ul>
+        </li>
+        <li>let</li>
+        <li>const</li>
+    </ol>
+    <script>
+        var value1=10;//declare and assigning
+        console.log(value1);
+        var value1=20;//redeclaration
+        console.log(value1);
+        var value1=30;//reintialization
+        console.log(value1);
+
+        function example(){
+            var a=10;
+            let b=20;
+            const c=30;
+            if(true){
+                var a=40;
+            let b=50;
+            const c=30;
+            console.log(a,b,c ,"inside fun before if");
+
+            }
+            console.log(a,b,c ,"inside function");
+            let d = 70;
+        }
+
+        example(); // Call the function here.
+        function example2() {
+  const data1 = "hello";
+  console.log(data1); 
+
+  if (true) {
+    const data1 = "hii";
+    console.log(data1); 
+  }
+
+  console.log(data1); 
+}
+
+example2();
+
+    </script>
+</body>
+</html>

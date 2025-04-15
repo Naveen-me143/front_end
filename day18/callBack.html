@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronous Coffee Prep</title>
+</head>
+<body>
+    <script>
+        function boilWater(callback) {
+            console.log("boiling water...");
+            callback();
+        }
+
+        function sugarWater(callback) {
+            console.log("sugar water...");
+            callback();
+        }
+
+        function coldWater(callback) {
+            console.log("cold water...");
+            callback();
+        }
+
+        function giveCoffee() {
+            console.log("give coffee water...");
+        }
+
+        console.log("All set! Get ready for synchronous callback-style execution...");
+        console.log("=========================================================");
+
+        // Nesting synchronous callbacks
+        boilWater(() => {
+            sugarWater(() => {
+                coldWater(() => {
+                    giveCoffee();
+                });
+            });
+        });
+
+        console.log("All done synchronously!");
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Coffee Prep</title>
+</head>
+<body>
+    <script>
+        function boilWater(callback) {
+            setTimeout(() => {
+                console.log("boiling water...");
+                callback();
+            }, 1500);
+        }
+
+        function sugarWater(callback) {
+            setTimeout(() => {
+                console.log("sugar water...");
+                callback();
+            }, 2000);
+        }
+
+        function coldWater(callback) {
+            setTimeout(() => {
+                console.log("cold water...");
+                callback();
+            }, 1000);
+        }
+
+        function giveCoffee() {
+            setTimeout(() => {
+                console.log("give coffee water...");
+            }, 500);
+        }
+
+        console.log("All set! Get ready for async callback-style execution...");
+        console.log("=========================================================");
+
+        // Nested asynchronous callbacks
+        boilWater(() => {
+            sugarWater(() => {
+                coldWater(() => {
+                    giveCoffee();
+                });
+            });
+        });
+    </script>
+</body>
+</html> -->
+

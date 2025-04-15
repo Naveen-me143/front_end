@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await Coffee Prep</title>
+</head>
+<body>
+    <script>
+        function boilWater() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Boiling water...");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        function brewCoffee() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Brewing coffee...");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        function addSugarAndMilk() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Adding sugar and milk...");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        function pourInCup() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Pouring into the cup...");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        function serveCoffee() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Serving coffee...");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        async function makeCoffee() {
+            try {
+                console.log("Starting coffee preparation...");
+                await boilWater();
+                await brewCoffee();
+                await addSugarAndMilk();
+                await pourInCup();
+                await serveCoffee();
+                console.log("Coffee is ready! Enjoy.");
+            } catch (error) {
+                console.error("Something went wrong during preparation:", error);
+            }
+        }
+
+        makeCoffee();
+    </script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await Coffee Prep</title>
+</head>
+<body>
+    <script>
+        function boilWater() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Boiling water...");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        function brewCoffee() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Brewing coffee...");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        function addSugarAndMilk() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Adding sugar and milk...");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        function pourInCup() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Pouring into the cup...");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        function serveCoffee() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    console.log("Serving coffee...");
+                    resolve();
+                }, 1000);
+            });
+        }
+
+        // ☕ Async function to run all steps
+        async function makeCoffee() {
+            try {
+                console.log("Starting coffee preparation...");
+                await boilWater();
+                await brewCoffee();
+                await addSugarAndMilk();
+                await pourInCup();
+                await serveCoffee();
+                console.log("☕ Coffee is ready! Enjoy.");
+            } catch (error) {
+                console.error("Something went wrong during preparation:", error);
+            }
+        }
+
+        // Run it
+        makeCoffee();
+    </script>
+</body>
+</html> -->

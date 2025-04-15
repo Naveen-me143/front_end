@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            transition-duration: 3s;
+            transition-property: all;
+        }
+        .steps{
+            transition-timing-function: step(6);
+        }
+        .box:hover{
+            width: 300px;
+        }
+        .ease-out{
+            transition-timing-function: ease-outgoog;
+        }
+        .ease-in{
+            transition-timing-function: ease-in;
+
+        }
+        .ease{
+            transition-timing-function: ease;
+        }
+    </style>
+</head>
+<body>
+   <div class="box ease">ease</div> 
+   <div class="box">default</div> 
+   <div class="box steps">steps</div>
+   <div class="box ease-in">ease-in</div> 
+   <div class="box ease-out">ease-out</div>  
+</body>
+</html>
