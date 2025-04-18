@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Race Example</title>
+</head>
+<body>
+    <script>
+        // Example with only resolved promises
+        const promise1 = new Promise((resolve) => {
+            setTimeout(resolve, 500, 'Promise 1 resolved');
+        });
+
+        const promise2 = new Promise((resolve) => {
+            setTimeout(resolve, 1000, 'Promise 2 resolved');
+        });
+
+        const promise3 = new Promise((resolve) => {
+            setTimeout(resolve, 200, 'Promise 3 resolved');
+        });
+
+        const promise4 = new Promise((resolve) => {
+            setTimeout(resolve, 700, 'Promise 4 resolved');
+        });
+
+        Promise.race([promise1, promise2, promise3, promise4])
+            .then((value) => {
+                console.log('First resolved promise:', value);
+            })
+            .catch((error) => {
+                console.error('A promise rejected:', error);
+            });
+
+        //Example where promise 4 is intentionally delayed, but still resolves.
+
+        const promise5 = new Promise((resolve) => {
+            setTimeout(resolve, 100, 'Promise 5 resolved');
+        });
+
+        const promise6 = new Promise((resolve) => {
+          setTimeout(resolve, 300, "Promise 6 resolved");
+        });
+
+        const promise7 = new Promise((resolve) => {
+          setTimeout(resolve, 500, "Promise 7 resolved");
+        });
+
+        const promise8 = new Promise((resolve) => {
+          setTimeout(resolve, 1000, "Promise 8 resolved");
+        });
+
+        Promise.race([promise5, promise6, promise7, promise8])
+            .then((value) => {
+                console.log('First resolved promise:', value);
+            })
+            .catch((error) => {
+                console.error('A promise rejected:', error);
+            });
+
+    </script>
+</body>
+</html>

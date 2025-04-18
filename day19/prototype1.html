@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype 1</title>
+</head>
+<body>
+    <script>
+        // Constructor function to create a Car object
+        function Car(name) {
+            this.name = name; // Assigning the name property
+        }
+
+        // Create an object using the Car constructor
+        let c1 = new Car("BMW"); // Pass "BMW" as a string
+        console.log(c1); // Logs the Car object with the name property
+        console.log(c1.name); // Logs the name property ("BMW")
+        console.log(c1.color); // Undefined, as color is not defined yet
+
+        // Adding a new property to the object
+        c1.color = 'red'; // Add the color property dynamically
+        console.log(c1); // Logs the updated object with the color property
+
+        // Explanation of constructor functions
+        // c1 is an object of the Car class.
+        // Car is a constructor function.
+        // Constructor functions are used to create objects.
+        // They allow creating multiple objects with similar properties and methods.
+       Car.prototype.model='X5';
+        console.log(Car.prototype);
+        console.log(c1);
+    </script>
+</body>
+</html>

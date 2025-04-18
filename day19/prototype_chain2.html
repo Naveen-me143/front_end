@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Chain Enhanced</title>
+</head>
+<body>
+    <script>
+        // Base object (prototype)
+        const Animal = {
+            species: "Animal",
+            eat: function() {
+                console.log("Animal eats");
+            }
+        };
+        console.log("Base Animal Object:", Animal);
+        Animal.eat(); // Calling the eat method
+
+        // Create Dog object with Animal as prototype
+        const Dog = Object.create(Animal);
+        Dog.color = "black"; // Adding dynamic property
+        Dog.bark = function() {
+            console.log("Woof!");
+        }; // Adding dynamic method
+        console.log("Dog Object with Inheritance:", Dog);
+        Dog.bark(); // Calling the bark method
+        Dog.eat(); // Inherited method from Animal
+
+        // Create Cat object with Animal as prototype
+        const Cat = Object.create(Animal);
+        Cat.species = "Cat"; // Overriding inherited property
+        console.log("Cat Object with Overridden Property:", Cat);
+        Cat.eat(); // Inherited method from Animal
+        
+    </script>
+</body>
+</html>

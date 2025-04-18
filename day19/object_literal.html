@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = {
+    name: "Alice",
+    age: 30,
+    profession: "Engineer",
+    greet: function() {
+        console.log(`Hello, my name is ${this.name}.`);
+    }
+};
+
+person.greet(); // Logs: Hello, my name is Alice
+console.log(person.age); // Logs: 30
+    </script>
+</body>
+</html>

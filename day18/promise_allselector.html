@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise.allSettled</title>
+</head>
+<body>
+    <div id="results"></div>
+
+    <script>
+  // Promise.allSettled() Example
+const promise1 = Promise.resolve('Promise 1 resolved');
+const promise2 = Promise.reject('Promise 2 rejected');
+const promise3 = new Promise((resolve) => setTimeout(resolve, 500, 'Promise 3 resolved'));
+const promise4 = new Promise((resolve, reject) => setTimeout(reject, 200, 'Promise 4 rejected'));
+
+Promise.allSettled([promise1, promise2, promise3, promise4])
+  .then((results) => {
+    console.log('All promises settled:', results);
+
+    results.forEach((result) => {
+      if (result.status === 'fulfilled') {
+        console.log('Promise resolved with:', result.value);
+      } else {
+        console.error('Promise rejected with:', result.reason);
+      }
+    });
+  });
+
+//Another example with more promises.
+const promise5 = new Promise((resolve) => setTimeout(resolve, 100, "promise 5 resolved"));
+const promise6 = new Promise((resolve, reject) => setTimeout(reject, 200, "promise 6 rejected"));
+const promise7 = new Promise((resolve) => setTimeout(resolve, 300, "promise 7 resolved"));
+const promise8 = new Promise((resolve, reject) => setTimeout(reject, 500, "promise 8 rejected"));
+const promise9 = new Promise((resolve) => setTimeout(resolve, 700, "promise 9 resolved"));
+const promise10 = new Promise((resolve, reject) => setTimeout(reject, 900, "promise 10 rejected"));
+
+Promise.allSettled([promise5, promise6, promise7, promise8, promise9, promise10])
+.then((results) => {
+    console.log("Second promise all settled results:", results);
+    results.forEach((result) => {
+        if(result.status === "fulfilled"){
+            console.log("promise resolved with:", result.value);
+        } else {
+            console.log("promise rejected with:", result.reason);
+        }
+    })
+});
+</script>
+</body>
+</html>

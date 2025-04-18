@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype with Age</title>
+</head>
+<body>
+    <script>
+        // Constructor function for Student
+        function Student(Fname, Lname, ydob) {
+            this.Fname = Fname;
+            this.Lname = Lname;
+            this.ydob = ydob;
+        }
+
+        // Adding the fullName method to the prototype
+        Student.prototype.fullName = function() {
+            return `${this.Fname} ${this.Lname}`;
+        };
+
+        // Adding the age method to the prototype
+        Student.prototype.age = function() {
+            return new Date().getFullYear() - this.ydob;
+        };
+
+        // Creating Student objects
+        let s1 = new Student("Rahul", "Kumar", 1995);
+        let s2 = new Student("Amit", "Sharma", 1996);
+        let s3 = new Student("Suresh", "Singh", 1997);
+
+        // Calling the fullName and age methods
+        console.log(s1.fullName(), "| Age:", s1.age()); // Outputs: Rahul Kumar | Age: (calculated age)
+        console.log(s2.fullName(), "| Age:", s2.age()); // Outputs: Amit Sharma | Age: (calculated age)
+        console.log(s3.fullName(), "| Age:", s3.age()); // Outputs: Suresh Singh | Age: (calculated age)
+    </script>
+</body>
+</html>

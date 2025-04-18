@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Car(brand, model, year) {
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
+    this.start = function() {
+        console.log(`${this.brand} ${this.model} started.`);
+    };
+}
+
+// Create objects
+let car1 = new Car("Toyota", "Camry", 2023);
+let car2 = new Car("Honda", "Civic", 2022);
+
+car1.start(); // Logs: Toyota Camry started
+car2.start(); // Logs: Honda Civic started
+    </script>
+</body>
+</html>

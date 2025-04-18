@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Chain</title>
+</head>
+<body>
+    <script>
+        const base={
+            start(){
+                console.log('Base start')
+            }
+        }
+        function Animal(name){
+            this.name=name;
+
+        }
+        Animal.prototype=base;//setting prototype of animal to base object
+
+        let a1=new Animal('jullie');
+         console.log(a1.name);//dog
+         console.log(a1);
+         a1.start();//base start
+         const PetAnimal=Object.create(Animal.prototype);
+         PetAnimal.play=function(){
+             console.log(this.name+' is playing');
+             console.log(PetAnimal);
+             console.log(PetAnimal.play());
+         }
+      
+    </script>
+</body>
+</html>

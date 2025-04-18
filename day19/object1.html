@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Constructor Functions Example</title>
+</head>
+<body>
+    <script>
+        // Constructor function without parameters
+        function Person() {
+            // Empty constructor
+        }
+        let p1 = new Person(); // Creating an instance of Person
+        console.log(p1); // Logs an empty object created by the constructor function
+
+        // Constructor function with parameters
+        function Person2(name) {
+            this.name = name; // Assigning the parameter value to the 'name' property
+        }
+        let p2 = new Person2('John'); // Creating an instance of Person2
+        console.log(p2); // Logs an object with a 'name' property set to 'John'
+        let p3 = {
+    "name": 'John'
+};
+
+console.log(p3);
+
+function f1() {
+    console.log('f1 called');
+}
+
+f1(); // Calling the function
+    </script>
+</body>
+</html>

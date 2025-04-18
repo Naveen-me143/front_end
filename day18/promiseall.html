@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise -All</title>
+</head>
+<body>
+    <!-- <script>
+        const task1 = Promise.resolve("chicken shop");
+        const task2 = Promise.resolve("grocessory shop");
+        const task3 = Promise.resolve("cutting section and cleaning");
+        const task4 = Promise.resolve("cooking section completed"); // Resolved instead of rejected
+
+        Promise.all([task1, task2, task3, task4])
+            .then((result) => {
+                console.log("done with all tasks");
+                console.log("Results from the tasks:", result);
+            })
+            .catch((error) => {
+                console.error("An error occurred:", error); // This block will no longer execute
+            });
+            //below is promise.race()
+            
+    </script> -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise - Race</title>
+</head>
+<body>
+    <script>
+        const promise1 = new Promise((resolve, reject) => {
+            setTimeout(resolve, 500, 'Promise 1 resolved');
+        });
+
+        const promise2 = new Promise((resolve, reject) => {
+            setTimeout(resolve, 1000, 'Promise 2 resolved');
+        });
+
+        const promise3 = new Promise((resolve, reject) => {
+            setTimeout(resolve, 200, 'Promise 3 resolved');
+        });
+
+        Promise.race([promise1, promise2, promise3])
+            .then((value) => {
+                console.log('First resolved promise:', value);
+            })
+            .catch((error) => {
+                console.error('A promise rejected:', error);
+            });
+
+        // Example with a rejection
+        const promise4 = new Promise((resolve, reject) => {
+            setTimeout(reject, 100, 'Promise 4 rejected');
+        });
+
+        const promise5 = new Promise((resolve, reject) => {
+            setTimeout(resolve, 200, 'Promise 5 resolved');
+        });
+
+        Promise.race([promise4, promise5])
+            .then((value) => {
+                console.log('First resolved promise:', value);
+            })
+            .catch((error) => {
+                const promise4 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        const someCondition = false; // Example condition
+        if (someCondition) {
+            resolve('Promise 4 resolved');
+        } else {
+            reject('Promise 4 rejected'); // Line 69
+        }
+    }, 100);
+});
+            });
+            
+
+    </script>
+</body>
+</html>
+</body>
+</html>
