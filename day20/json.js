@@ -59,22 +59,65 @@
 //   }
   
 //   fetchData();
-const json1 = {
-    "name": "John",
-    "age": 30,
-    "city": "New York"
-  }
+// const json1 = {
+//     "name": "John",
+//     "age": 30,
+//     "city": "New York"
+//   }
   
-  const json2 = {
-    "email": "p7NLQ@example.com",
-    "phone": "1234567890"
-  }
+//   const json2 = {
+//     "email": "p7NLQ@example.com",
+//     "phone": "1234567890"
+//   }
   
-  console.log(json1);
-  console.log(json2);
-  json1.phone=5563667;
-  json1["email"]=json2.email;
-  delete json1.phone;//deletion purpose using this delete method
+//   console.log(json1);
+//   console.log(json2);
+//   json1.phone=5563667;
+//   json1["email"]=json2.email;
+//   delete json1.phone;//deletion purpose using this delete method
 //   const merged_json = Object.assign({}, json1, json2); // Use an empty object as the target to avoid modifying json1
 // const merged_json = { ...json1, ...json2 };
-// console.log(merged_json);  
+// console.log(merged_json);
+// const json1 = {
+//     "name": "John",
+//     "age": 30,
+//     "city": "New York"
+//   };
+  
+//   console.log(json1);
+  
+//   for (let key in json1)  {
+//     console.log(key + ": " + json1[key]);
+//   }
+  
+//   Object.keys(json1).forEach(key => {
+//     console.log(key + ": " + json1[key]);
+//   });
+  
+//   Object.entries(json1).forEach(entry => {
+//     const [key, value] = entry;
+//     console.log(key + ": " + value);
+//   });
+  
+//   Object.values(json1).forEach(value => {
+//     console.log(value);
+//   });
+//   const user = {
+//     "name": "John",
+//     "age": 30,
+//     "city": "New York",
+//     "skills": ["JavaScript", "Python", "Java"],
+//   };
+  
+const user = {
+    "name": "John",
+    "age": 30,
+    "city": "New York",
+    "skills": ["JavaScript", "Python", "Java"],
+  };
+  
+  // destructuring the object
+  const { name, age } = user;
+  console.log(name);
+  console.log(age);
+  

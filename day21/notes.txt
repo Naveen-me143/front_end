@@ -1,0 +1,7 @@
+array:
+1.array is a collection of items and array is list of items/values,array it is used to store multiple values in a single variabe.
+2.array is mutable(modify after creation) data type.
+3.array is dynamic data type.
+4.it can hold values/items like num,string,objects etc...
+is denoted by[].
+array is a ordered collcetion of items.
