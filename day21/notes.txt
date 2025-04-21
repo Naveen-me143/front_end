@@ -5,3 +5,148 @@ array:
 4.it can hold values/items like num,string,objects etc...
 is denoted by[].
 array is a ordered collcetion of items.
+==========================================
+let arr1 = [1, 34567890, "hello", true];
+console.log(arr1);
+let arr2=['hlo','world','jhhsd','jhh','dffa'];
+console.log(arr2);
+console.log(arr2[0]);
+let arr3=[['a','b'],['c','d']];
+console.log(arr3);
+// Creating an array using the Array constructor
+let arr = new Array(5); // Creates an array with 5 empty slots
+console.log(arr); // Output: [empty × 5]
+
+// Another example with predefined values
+let arr4 = new Array(10, "hello", true, 42);
+console.log(arr4); // Output: [10, "hello", true, 42]
+//==================//
+let letters = Array.from("Hello");
+console.log(letters); // Output: ["H", "e", "l", "l", "o"]
+let uniqueValues = new Set([1, 2, 3, 4]);
+let arrayFromSet = Array.from(uniqueValues);
+console.log(arrayFromSet); // Output: [1, 2, 3, 4]
+let numbers = [1, 2, 3];
+let squares = Array.from(numbers, x => x ** 2);
+console.log(squares); // Output: [1, 4, 9]
+//Array.of(element1, element2, ...);//
+let myArray = Array.of(1, "hello", true, null);
+console.log(myArray); // Output: [1, "hello", true, null]
+let dynamicArray = Array.of(10, 20, 30);
+console.log(dynamicArray); // Output: [10, 20, 30]
+//==========================// Updating value in arr1
+let arr1 = ['apple', 'banana', 'orange']; 
+console.log(arr1); 
+arr1[2] = 1000; // Updates 'orange' to 1000.
+console.log(arr1); // Output: ['apple', 'banana', 1000']
+
+// Working with fruits array
+let fruits = ['apple', 'blueberry', 'cherry'];
+
+// push(): Adds 'orange' to the end of the array.
+fruits.push('orange'); 
+console.log(fruits); // Output: ['apple', 'blueberry', 'cherry', 'orange']
+
+// unshift(): Adds 'kiwi' to the beginning of the array.
+fruits.unshift('kiwi'); 
+console.log(fruits); // Output: ['kiwi', 'apple', 'blueberry', 'cherry', 'orange']
+
+// pop(): Removes the last element from the array.
+fruits.pop(); 
+console.log(fruits); // Output: ['kiwi', 'apple', 'blueberry', 'cherry']
+
+// shift(): Removes the first element from the array.
+fruits.shift(); 
+console.log(fruits); // Output: ['apple', 'blueberry', 'cherry']
+
+// indexOf(): Finds the index of a specific element in the array.
+console.log(fruits.indexOf('blueberry')); // Output: 1 - Finds the index of 'blueberry'
+
+// includes(): Checks if an element exists in the array.
+console.log(fruits.includes('banana')); // Output: false - Checks if 'banana' exists
+
+// sort(): Sorts the elements alphabetically.
+fruits.sort(); 
+console.log(fruits); // Output: ['apple', 'blueberry', 'cherry']
+
+// reverse(): Reverses the order of the array.
+fruits.reverse(); 
+console.log(fruits); // Output: ['cherry', 'blueberry', 'apple']
+
+// concat(): Combines two arrays into one.
+let moreFruits = ['grape', 'pear']; 
+let combined = fruits.concat(moreFruits); 
+console.log(combined); // Output: ['cherry', 'blueberry', 'apple', 'grape', 'pear']
+
+// slice(): Extracts a portion of the array.
+let sliced = combined.slice(1, 3); // Extracts elements from index 1 to 3 (excluding 3).
+console.log(sliced); // Output: ['blueberry', 'apple']
+
+// splice(): Adds or removes elements from the array.
+combined.splice(1, 1, 'mango'); // Removes 1 element at index 1 and adds 'mango'.
+console.log(combined); // Output: ['cherry', 'mango', 'apple', 'grape', 'pear']
+
+// at(): Accesses elements using the at() method.
+console.log(combined.at(1)); // Output: 'mango' - Access the second element.
+console.log(combined.at(-1)); // Output: 'pear' - Access the last element.
+
+// Another array to demonstrate the at() method:
+let arr9 = [10, 20, 30, 40, 50];
+console.log(arr9.at(0)); // Output: 10
+console.log(arr9.at(-1)); // Output: 50
+console.log(arr9.at(8)); // Output: undefined (index out of bounds)
+//=======================================
+Here is the content extracted from your image:
+
+---
+
+**2. map()**
+- It is used to create a new array by performing a specific operation on each element of an existing array.
+- It returns a new array.
+- It won't change the original array.
+- It takes a function as an argument.
+- It is used for data transferring.
+-it is an example of higher order function and introduced in Es5
+
+---
+Here is the content extracted from your image:
+
+---
+
+### `map()` Syntax:
+```javascript
+map(element, index, array) {
+    return element;
+}
+```
+- **element**: The value of the array element.
+- **index**: The index of the array element (optional).
+- **array**: The original array being iterated over (optional).
+
+---
+
+Here is the content extracted from your image:
+
+---
+
+**3. filter()**
+- It is used to create a new array by keeping the elements of an existing array for which a specific condition is true.
+- It returns a new array.
+- It won't change the original array.
+- It takes a function as an argument.
+- It is an example of a higher-order function introduced in ES6.
+
+**Syntax:**
+```javascript
+filter(element, index, array) {
+    return element;
+}
+```
+- **element**: Value of the array element.
+- **index**: Index of the array element (optional).
+- **array**: The original array being iterated over (optional).
+
+---
+
+Let me know if you'd like further examples or a detailed explanation! 😊
+
