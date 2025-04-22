@@ -150,3 +150,27 @@ filter(element, index, array) {
 
 Let me know if you'd like further examples or a detailed explanation! 😊
 
+//--------------------
+Here are the definition points for the methods:
+
+---
+
+1. **`includes()`**: Checks if a certain value exists in an array. Returns `true` or `false`.
+
+2. **`find()`**: Returns the first element in an array that meets a specified condition.
+
+3. **`every()`**: Determines if all elements in an array satisfy a given condition. Returns `true` or `false`.
+
+4. **`splice()`**: Modifies an array by adding, removing, or replacing elements.
+
+5. **`findIndex()`**: Returns the index of the first element that meets a specified condition. Returns `-1` if no elements match.
+
+6. **`some()`**: Determines if at least one element in an array meets a given condition. Returns `true` or `false`.
+
+7. **`reverse()`**: Reverses the order of elements in an array. Modifies the original array.
+
+8. **`toString()`**: Converts an array into a comma-separated string.
+
+---
+
+Let me know if you'd like further details or practical examples for these methods! 😊

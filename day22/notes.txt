@@ -1,0 +1,20 @@
+splice():
+=========
+-it is used to add or remove elemts from an array
+-it returns an array
+-it changes the original array
+synatx:
+array.splice(start, deleteCount, item1, item2, ..., itemN);
+array.splice(start, deleteCount, element1, element2, element3, ...elementN)
+
+-start: it is used to specify the starting index
+
+-deleteCount: it is used to specify the number of elements to be removed
+
+element1, element2, element3, ...elementN: it is used to specify the elements to be added (optional)
+some():
+++++++++
+syntax:array.some(element, index)=>{
+    //condition
+    return element
+    }
