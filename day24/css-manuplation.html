@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Manipulation Example</title>
+    <style>
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+        width: 400px;
+        height: 50px;
+        padding: 20px;
+      }
+      .dynamic-style {
+        color: red;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Dynamically styled text -->
+    <div id="div1">This is a dynamically styled div</div>
+
+    <!-- Add Highlight -->
+    <div id="container">This is another container</div>
+    <button onclick="addHighlight()">Click to Add Highlight</button>
+
+    <!-- Remove Highlight -->
+    <div id="container2" class="highlight">This is a CSS removable container</div>
+    <button onclick="removeHighlight()">Click to Remove Highlight</button>
+
+    <!-- Toggle Highlight -->
+    <div id="container3">This is for toggle highlight</div>
+    <button onclick="toggleHighlight()">Click to Toggle Highlight</button>
+
+    <!-- Check Highlight -->
+    <div id="container4" class="highlight">Checking the highlight</div>
+    <button onclick="checkHighlight()">Check Highlight</button>
+
+    <!-- Access and Log Computed Styles -->
+    <div id="box" class="highlight">This is a div box</div>
+    <button onclick="logComputedStyles()">Log Computed Styles</button>
+
+    <script>
+      // Dynamically styled div1
+      const div1 = document.getElementById("div1");
+      div1.classList.add("dynamic-style"); // Adding dynamic styles using class
+
+      // Add Highlight function
+      const container = document.getElementById("container");
+      function addHighlight() {
+        container.classList.add("highlight");
+      }
+
+      // Remove Highlight function
+      const container2 = document.getElementById("container2");
+      function removeHighlight() {
+        container2.classList.remove("highlight");
+      }
+
+      // Toggle Highlight function
+      const container3 = document.getElementById("container3");
+      function toggleHighlight() {
+        container3.classList.toggle("highlight");
+      }
+
+      // Check Highlight function
+      const container4 = document.getElementById("container4");
+      function checkHighlight() {
+        const message = container4.classList.contains("highlight")
+          ? "Highlight is present"
+          : "Highlight is not present";
+        alert(message);
+      }
+
+      // Log Computed Styles function
+      const box = document.getElementById("box");
+      function logComputedStyles() {
+        const styles = getComputedStyle(box);
+        console.log("Background Color:", styles.backgroundColor);
+        console.log("Padding:", styles.padding);
+      }
+    </script>
+  </body>
+</html>

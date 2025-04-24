@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling with Dispatch</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .box {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Click Event -->
+    <div id="div1">Click me to highlight!</div>
+    <button id="btn">Click me for dispatch event</button>
+
+    <!-- Add Highlight -->
+    <div id="container">This is another container</div>
+    <button onclick="addHighlight()">Click to Add Highlight</button>
+
+    <!-- Remove Highlight -->
+    <div id="container2" class="highlight">This is a CSS removable container</div>
+    <button onclick="removeHighlight()">Click to Remove Highlight</button>
+
+    <!-- Toggle Highlight -->
+    <div id="container3">This is for toggle highlight</div>
+    <button onclick="toggleHighlight()">Click to Toggle Highlight</button>
+
+    <!-- Check Highlight -->
+    <div id="container4" class="highlight">Checking the highlight</div>
+    <button onclick="checkHighlight()">Check Highlight</button>
+
+    <!-- Hover Event -->
+    <div id="box" class="box">Hover over me</div>
+
+    <script>
+        // Dynamically styled div1
+        const div1 = document.getElementById("div1");
+        div1.addEventListener("click", () => div1.classList.toggle("highlight"));
+
+        // Add Highlight function
+        const container = document.getElementById("container");
+        function addHighlight() {
+            container.classList.add("highlight");
+        }
+
+        // Remove Highlight function
+        const container2 = document.getElementById("container2");
+        function removeHighlight() {
+            container2.classList.remove("highlight");
+        }
+
+        // Toggle Highlight function
+        const container3 = document.getElementById("container3");
+        function toggleHighlight() {
+            container3.classList.toggle("highlight");
+        }
+
+        // Check Highlight function
+        const container4 = document.getElementById("container4");
+        function checkHighlight() {
+            const message = container4.classList.contains("highlight")
+                ? "Highlight is present"
+                : "Highlight is not present";
+            alert(message);
+        }
+
+        // Hover Events for box
+        const box = document.getElementById("box");
+        box.addEventListener("mouseover", function () {
+            box.style.backgroundColor = "red";
+            box.innerHTML = "This is a mouseover event";
+        });
+        box.addEventListener("mouseout", function () {
+            box.style.backgroundColor = "green";
+            box.innerHTML = "This is a mouseout event";
+        });
+
+        // Button click event and event dispatching
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", () => {
+            alert("Button is clicked");
+            const event = new Event("click");
+            btn.dispatchEvent(event);
+        });
+    </script>
+</body>
+</html>

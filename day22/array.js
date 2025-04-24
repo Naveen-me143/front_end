@@ -47,3 +47,69 @@ console.log(typeof output6); // "string"
 let arr7 = [10, 20, 30];
 let output7 = arr7.join('-');//we can use any symbol instead of - like , or space etc.
 console.log(output7); // "10-20-30"
+//=========================slice() method---------------
+/*
+### `slice()` Method
+- The `slice()` method returns a **shallow copy** of a portion of an array into a new array object.
+- It is selected from the **start** index to the **end** index (end **not included**).
+- The **original array remains unchanged**.
+
+*/
+let arr8 = [10, 20, 30, 40, 50, 60];
+let output8 = arr8.slice(2, 4);//[30, 40]
+console.log(output8); // [30, 40]
+//===========forEach() method-------------
+let arr9 = [10, 20, 30, 40, 50, 60];
+
+arr9.forEach((element, index, array) => {
+  console.log(`element: ${element} - index: ${index}`);
+});
+
+//================
+let arr10 = [10, 20, 30, 40, 50, 60];
+
+for (let element of arr10) {
+  console.log(element);
+}
+//===================
+if (arr10.indexOf(100) === -1) {
+    console.log("The value 100 was not found in the array.");
+  } else {
+    console.log("The value 100 was found at index:", arr10.indexOf(100));
+  }
+  /*==============difference
+  indexOf()       findIndex()     includes()
+  -------------------------------------------------------
+  matchType       exactMatch      partialMatch    exactMatch
+  returns         index or -1     index or -1     boolean
+  work with objects yes             no            yes */
+  /**
+   * padStart()
+   *    -the padStart() 
+   */
+  let str1 = 'hello';
+console.log(str1.padStart(10, '*')); // hello*****
+console.log(str1.padEnd(10, '*'));//hello*****
+//==============================
+let str2 = '  hello  ';
+console.log(str2.length); // 11
+str2.trimStart();
+console.log(str2.length); // 11 (trimStart() doesn't modify the original string)
+console.log(str2);       // '  hello  ' (original string remains unchanged)
+str2.trimEnd();
+console.log(str2.length); // 11 (trimEnd() also doesn't modify the original string)
+//++++++++++++++++
+let arr13 = [10, 40, 20, 30, 60, 40];
+arr13.sort();
+console.log(arr13); // [ 10, 20, 30, 40, 40, 60 ]
+//++++++++++++++++++++++which is same like reduce ()
+let arr14 = ['welcome', 'to', 'session'];
+let result14 = arr14.reduceRight(
+  (accumulator, currentValue, currentIndex, array) => {
+    return accumulator + ' ' + currentValue;
+  }
+);
+console.log(result14); // session to welcome
+console.log(arr14);    // [ 'welcome', 'to', 'session' ]
+//=================
+GeolocationCoordinates
