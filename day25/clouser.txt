@@ -1,0 +1,19 @@
+Closures:
+- It is a function that has access to the parent scope.
+- It can access the variables and functions of the parent scope.
+- It is a special kind of function that allows a function to remember and access the variables and functions of its parent scope (outer function).
+
+Use Case:
+- It is used to create private variables and functions.
+- Enables data hiding (encapsulation).
+-------------------------------------------
+this:
+- It is a keyword that refers to the current object.
+- It is used to access the properties and methods of the current object.
+--------------------------------------=====
+
+
+
+
+
+

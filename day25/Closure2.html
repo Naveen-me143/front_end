@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure2</title>
+</head>
+<body>
+    <button id="btn">Click me</button>
+    <script>
+        // First Closure Example
+        function parent() {
+            let home = 'hyderabad🏡';
+            return function child() {
+                console.log(home);
+            };
+        }
+
+        let ClosureChild = parent();
+        ClosureChild();
+
+        //++++++++++++++++++++++++++++++++++++++
+
+        // Second Closure Example with Button Click
+        function createClickHandler(message) {
+            return function () {
+                console.log(message, 'clicked from closure');
+            };
+        }
+
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click', createClickHandler("hello this is a closure example with button click"));
+
+        //++++++++++++++++++ factory function+++++++++++++++++++++++++
+
+
+        function multiply(multiplier){
+            return function(n){
+                return multiplier*n;
+            }
+        }
+        let double=multiply(2)
+        console.log(double(10));
+        console.log(double(14));
+        console.log(double(50));
+        //+++++++++++++++++++ this ++++++++++++++++++++++++++++++
+        
+    </script>
+</body>
+</html>

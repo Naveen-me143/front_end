@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This keyword</title>
+</head>
+<body>
+    <script>
+       /* // Regular function within the window scope
+        function showThis() {
+            console.log(this); // 'this' refers to the global object (window)
+        }
+
+        // Call the function
+        showThis(); // Logs the window object to the console
+
+        // Assign the function to a property of the window object
+        window.customProperty = showThis;
+        window.customProperty(); // Still logs the window object
+        */
+       //================
+       function Person(name, age) {
+    this.userName = name;
+    this.userAge = age;
+}
+
+let p = new Person('kumar', 20);
+console.log(p);
+    </script>
+
+</body>
+</html>
