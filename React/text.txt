@@ -46,3 +46,14 @@ Why use React:
     -cerate a folderopen terminal for folder(cmd)
     -npm create-vite@latest
      -then 
+     ----
+     1.create jsx file 
+     2.declare the component( function) 
+     3.return the jsx code(encapsulate/wrap the jsx code)     
+     
+       -wrapping can be done
+
+          -using div tag
+          -using fragment <></>
+          -using template string ``
+         - using react.fragment <React.Fragment></React.Fragme 4.4.export the component 5.use the component in remaining 5.jsx file (import in main.jsx file)
