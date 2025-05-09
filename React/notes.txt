@@ -1,0 +1,66 @@
+for use this process:
+function Header() {
+    let menus = ['Home', 'About', 'Contact'];
+
+    return (
+        <div>
+            <h1>Header</h1>
+            <ul>
+                {menus.map((menu) => (<li>{menu}</li>))}
+            </ul>
+        </div>
+    )
+}
+export default Header;
+-------------------------------
+for function use this process:
+function Header() {
+    let menus = ['Home', 'About', 'Contact'];
+
+    return (
+        <div>
+            <h1>Header</h1>
+            <ul>
+                {menus.map((menu) => (<li>{menu}</li>))}
+            </ul>
+        </div>
+    )
+}
+export default Header;
+======================
+and the main.jsx should be like this:
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+import Header from './components/Header.jsx'
+import Footer from './Components/Footer.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <Header />
+    <Footer />
+  </StrictMode>,
+)
++++++++++++++++++++++++++
+On click increase and decreases numbers example:
+import { useState } from "react";
+
+
+const Example2=()=> {
+    let[count,setCount]=useState(0);
+    
+ return (
+    <>
+    <button onClick={()=>setCount(count+1)}>+</button>
+    <span>{count}</span>
+    <button onClick={()=>setCount(count-1)} >-</button>
+    <div><button onClick={()=>setCount(0)} >Reset</button>
+    </div>
+    </>
+ );
+};
+export default Example2;
+export default Example2;
+//o/p: + _ -//when click on + it increses the count vise versa.
++++++++++++++++++++
